@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="30px" viewBox="0 0 42 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>symbol-quote</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="desktop_xlarge_1440x_12col" transform="translate(-699.000000, -2280.000000)" fill="#00695C">
+            <g id="4-zitat" transform="translate(0.000000, 2220.000000)">
+                <g id="zitat-pos_1" transform="translate(400.000000, 60.000000)">
+                    <g id="symbol-zitat" transform="translate(299.000000, 0.000000)">
+                        <g transform="translate(21.000000, 15.000000) rotate(180.000000) translate(-21.000000, -15.000000) " id="Shape">
+                            <g>
+                                <path d="M27,30 L36,30 L42,18 L42,0 L24,0 L24,18 L33,18 L27,30 Z M3,30 L12,30 L18,18 L18,0 L0,0 L0,18 L9,18 L3,30 Z" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

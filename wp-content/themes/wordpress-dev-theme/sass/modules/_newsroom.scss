@@ -1,0 +1,63 @@
+.newsroom {
+	padding: 50px 15px;
+	background-color: $color-light-grey;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	.row {
+		> div {
+			padding-bottom: 20px;
+			margin-top: 20px;
+			width: 100%;
+			max-width: 100%;
+			.image {
+				position: relative;
+				a {
+					display: inline-block;
+					cursor: pointer;
+				} 
+			}
+
+			.text {
+				position: relative; 
+				padding: 0px 20px;
+				h3, p {
+					padding: 0 20px;
+				}
+				h3 {
+					color: $color-medium-dark-grey;
+				}
+				p {
+					color: $color-medium-light-grey;
+				}
+				a {
+					display: block;
+					text-transform: uppercase;
+					font-weight: bold;
+					padding: 10px;
+					svg {
+						margin-left: 5px;
+						transition: all 0.2s;
+					}
+					&:hover {
+						svg {
+							g {
+								stroke: $color-dark-grey;
+							}
+						}
+					}
+				}
+			}
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 15px;
+				bottom: 0;
+				left: 15px;
+				background-color: $color-white;
+				@include box-shadow(0,5px,30px,rgba(0,0,0,0.05));
+			}
+		}
+	}
+}

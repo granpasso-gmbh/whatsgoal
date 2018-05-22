@@ -1,0 +1,117 @@
+.testimonials {
+	background-color: $color-primary;
+	padding: 40px 0px 30px;
+	text-align: center;
+	.swiper-container-testimonials {
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 25px;
+			top: 0;
+			right: auto;
+			bottom: 0;
+			left: 0;
+			z-index: 5;
+			background: rgba(0,191,166,1);
+			background: -moz-linear-gradient(left, rgba(0,191,166,1) 0%, rgba(0,191,166,0) 100%);
+			background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,191,166,1)), color-stop(100%, rgba(0,191,166,0)));
+			background: -webkit-linear-gradient(left, rgba(0,191,166,1) 0%, rgba(0,191,166,0) 100%);
+			background: -o-linear-gradient(left, rgba(0,191,166,1) 0%, rgba(0,191,166,0) 100%);
+			background: -ms-linear-gradient(left, rgba(0,191,166,1) 0%, rgba(0,191,166,0) 100%);
+			background: linear-gradient(to right, rgba(0,191,166,1) 0%, rgba(0,191,166,0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00bfa6', endColorstr='#00bfa6', GradientType=1 );
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			width: 25px;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: auto;
+			z-index: 5;
+			background: rgba(0,191,166,0);
+			background: -moz-linear-gradient(left, rgba(0,191,166,0) 0%, rgba(0,191,166,1) 100%);
+			background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,191,166,0)), color-stop(100%, rgba(0,191,166,1)));
+			background: -webkit-linear-gradient(left, rgba(0,191,166,0) 0%, rgba(0,191,166,1) 100%);
+			background: -o-linear-gradient(left, rgba(0,191,166,0) 0%, rgba(0,191,166,1) 100%);
+			background: -ms-linear-gradient(left, rgba(0,191,166,0) 0%, rgba(0,191,166,1) 100%);
+			background: linear-gradient(to right, rgba(0,191,166,0) 0%, rgba(0,191,166,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00bfa6', endColorstr='#00bfa6', GradientType=1 );
+		}
+		.swiper-wrapper {
+			@include align-items(center);
+			.swiper-slide {
+				padding: 0px 25px;
+				.text {
+					p {
+						font-size: $font-size-md;
+						font-weight: bold;
+						color: $color-white;
+						text-transform: uppercase;
+						line-height: 120%;
+					}
+				}
+				img.top {
+					margin-top: 0px;
+					margin-bottom: 25px;
+				}
+				img.bottom {
+					margin-top: 25px;
+					margin-bottom: 25px;
+				}
+				.name {
+					font-size: $font-size-lg;
+					color: $color-primary-dark;
+					font-weight: bold;
+				}
+				.position {
+					font-size: $font-size-xs;
+					color: $color-white;
+				}
+			}
+		}
+	}
+	.swiper-pagination-testimonials {
+		position: relative;
+		display: block;
+		margin: 20px auto 0px;
+		text-align: center;
+		.swiper-pagination-bullet {
+			width: 12px;
+			height: 10px;
+			border-radius: 0;
+			margin: 5px;
+			opacity: 1;
+			background: transparent url("images/triangle-small.svg");
+			background-repeat: no-repeat;
+			&.swiper-pagination-bullet-active {
+				background: transparent url("images/triangle-small-fill-1.svg");
+			}
+		}
+	}
+	@media #{$media-medium-up} {
+		padding: 70px 0px 50px;
+		.swiper-container-testimonials {
+			max-width: 80%;
+			&:before {
+				width: 80px;
+			}
+			&:after {
+				width: 80px;
+			}
+			.swiper-slide {
+				padding: 0px 100px !important;
+				.text {
+					p {
+						font-size: $font-size-xl !important;
+						color: $color-white;
+						text-transform: uppercase;
+						line-height: 120%;
+					}
+				}
+			}
+		}
+	}
+}

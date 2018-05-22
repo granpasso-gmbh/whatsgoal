@@ -1,0 +1,75 @@
+.partner-werden {
+	width: 100%;
+	.collapse-head {
+		background-color: $color-secondary;
+		padding: 20px;
+		text-align: center;
+		h3 {
+			text-transform: uppercase;
+			color: $color-white;
+			margin: 0px 0px 10px;
+		}
+		.akkordeon-open {
+			font-size: $font-size-lg;
+			text-transform: uppercase;
+			color: $color-white;
+			cursor: pointer;
+			svg {
+				@include transition(.4s);
+				@include transform(rotate(0deg));
+			}
+		}
+	}
+	.collapse-content {
+		padding: 0px 20px 0px;
+		background: rgba(198,40,40,1);
+		background: -moz-linear-gradient(top, rgba(198,40,40,1) 0%, rgba(244,67,54,1) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(198,40,40,1)), color-stop(100%, rgba(244,67,54,1)));
+		background: -webkit-linear-gradient(top, rgba(198,40,40,1) 0%, rgba(244,67,54,1) 100%);
+		background: -o-linear-gradient(top, rgba(198,40,40,1) 0%, rgba(244,67,54,1) 100%);
+		background: -ms-linear-gradient(top, rgba(198,40,40,1) 0%, rgba(244,67,54,1) 100%);
+		background: linear-gradient(to bottom, rgba(198,40,40,1) 0%, rgba(244,67,54,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c62828', endColorstr='#f44336', GradientType=0 );
+		max-height: 0px;
+		overflow: hidden;
+		@include transition(.4s ease-in-out);
+		.inner {
+			width: 100%;
+			max-width: 800px;
+			margin: 0px auto;
+			.intro {
+				text-align: center;
+				margin-bottom: 20px;
+				p {
+					font-size: $font-size-lg;
+					color: $color-white;
+					line-height: 120%;
+				}
+			}
+			.formular {
+				width: 100%;
+				max-width: 540px;
+				margin: 0 auto;
+				input[type="submit"] {
+					display: block;
+					width: 100%;
+					margin-top: 10px;
+					@extend .button-primary-dark;
+				}
+			}
+		}
+	}
+	&.collapse-wrapper {
+		&.open {
+			.collapse-head {
+				svg {
+					@include transform(rotate(45deg));
+				}
+			}
+			.collapse-content {
+				max-height: 1000px;
+				padding: 40px 20px 80px;
+			}
+		}
+	}
+}

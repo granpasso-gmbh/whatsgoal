@@ -1,0 +1,87 @@
+h1, .h1 {
+	font-size: $font-size-xxl;
+	font-weight: 600;
+	margin: 20px 0;
+	line-height: 120%;
+}
+
+h2, .h2 {
+	font-size: $font-size-xxl;
+	font-weight: bold;
+	line-height: 140%;
+	margin: 0 0 20px 0;
+	position: relative;
+	text-transform: uppercase;
+	&.with-line {
+		text-align: center;
+		display: block;
+		margin: 0px auto 20px;
+		padding-bottom: 30px;
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: 40px;
+			height: 1px;
+			margin-left: -20px;
+			background-color: $color-primary;
+		}
+	}
+}
+
+h3, .h3 {
+	font-size: $font-size-lg;
+	line-height: $base-line-height;
+	font-weight: bold;
+	margin: 20px 0px 10px;
+}
+
+h4, .h4 {
+	font-size: $font-size-sm;
+	line-height: $base-line-height;
+	margin: 0 0 10px 0;
+    font-weight: normal;
+}
+
+h5, .h5 {
+	font-size: $font-size-xs;
+	font-family: $font-akrobat;
+	font-weight: bold;
+	line-height: 140%;
+	margin: 0;
+}
+
+h6, .h6 {
+	font-size: $font-size-xxs;
+	font-family: $font-akrobat;
+	line-height: 180%;
+	margin: 0;
+}
+
+p {
+	font-size: $text-font-size;
+	font-family: $font-akrobat;
+	line-height: 150%;
+
+	.bigger-text & {
+		font-size: $font-size-lg;
+		line-height: 120%;
+	}
+}
+
+blockquote,
+blockquote p {
+    color: $color-medium-grey;
+    font-size: $font-size-lg;
+    line-height: 120%;
+
+    .bigger-text & {
+        font-size: $font-size-xxl;
+    }
+}
+
+b, strong {
+	font-family: $font-akrobat;
+	font-weight: 600;
+}

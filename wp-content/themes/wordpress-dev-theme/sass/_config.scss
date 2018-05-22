@@ -1,0 +1,42 @@
+$base-font-size: 16px;
+$base-line-height: 1.4em;
+
+$body-font-family: $font-akrobat;
+$font-smoothing: antialiased;
+
+$font-size-xxl: 2rem;			// 32px
+$font-size-xl: 1.625rem;		// 26px
+$font-size-lg: 1.375rem;		// 22px
+$font-size-md: 1.125rem;		// 18px
+$font-size-sm: 1rem;			// 16px
+$font-size-xs: 0.875rem;		// 14px
+$font-size-xxs: 0.75rem;		// 12px
+
+$color-primary: #00BFA5;
+$color-primary-dark: #00695C;
+$color-secondary: #F44336;
+$color-secondary-dark: #C62828;
+$color-light-grey: #f5f5f5;
+$color-medium-light-grey: #BCBCBC;
+$color-medium-grey: #9E9E9E;
+$color-medium-dark-grey: #676767;
+$color-dark-grey: #424242;
+$color-black: #000000;
+$color-white: #FFFFFF;
+
+$text-font-size: $font-size-sm;
+
+$body-bg: #ffffff;
+$body-font-color: $color-dark-grey;
+
+$media-tiny: "only screen and (max-width: 767px)";
+$media-small: "only screen and (min-width: 768px) and (max-width: 991px)";
+$media-medium: "only screen and (min-width: 992px) and (max-width: 1199px)";
+$media-large: "only screen and (min-width: 1200px)";
+
+$media-small-down: "only screen and (max-width: 991px)";
+$media-small-up: "only screen and (min-width: 768px)";
+$media-medium-up: "only screen and (min-width: 992px)";
+$media-medium-down: "only screen and (max-width: 1200px)";
+
+$media-tiny-landscape: "only screen and (max-width: 767px) and (orientation: landscape)";

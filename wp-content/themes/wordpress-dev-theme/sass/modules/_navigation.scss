@@ -1,0 +1,135 @@
+.menu-main-menu-container {
+    @media #{$media-small-down} {
+        display: block;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9;
+        @include transform(translatex(-100%));
+        @include transition(.5s ease);
+        background-color: $color-white;
+
+        .menu-open & {
+            @include transform(translateX(0%));
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: block;
+                margin: 0;
+                padding: 0;
+
+                a {
+                    line-height: 40px;
+                    display: block;
+                    text-align: left;
+                    padding: 10px 30px;
+                    color: $color-dark-grey;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    border-bottom: 1px solid $color-light-grey;
+
+                    &:hover {
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media #{$media-medium-up} {
+        display: inline-block;
+        width: auto;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+
+                a {
+                    line-height: 40px;
+                    text-align: center;
+                    padding: 0 10px;
+                    color: $color-dark-grey;
+                    text-transform: uppercase;
+                    font-weight: bold;
+
+                    &:hover {
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 20;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    @include transition(all .3s ease-in-out);
+    span {
+        width: 40px;
+        height: 4px;
+        display: block;
+        background-color: $color-dark-grey;
+        position: absolute;
+        @include opacity(1);
+        @include transition(all .3s ease-in-out);
+        &:first-child {
+            top: 0px;
+            left: 0px;
+        }
+        &:nth-child(2) {
+            top: 12px;
+            left: 0px;
+        }
+        &:nth-child(3) {
+            top: 12px;
+            left: 0px;
+        }
+        &:last-child {
+            top: 25px;
+            left: 0px;
+        }
+    }
+
+    .menu-open & {
+
+        span {
+            &:first-child {
+                opacity: 0;
+            }
+            &:nth-child(2) {
+                @include transform(rotate(45deg));
+            }
+            &:nth-child(3) {
+                @include transform(rotate(-45deg));
+            }
+            &:last-child {
+                opacity: 0;
+            }
+        }
+    }
+
+    @media #{$media-medium-up} {
+        display: none;
+    }
+}

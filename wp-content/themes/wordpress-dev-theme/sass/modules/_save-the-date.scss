@@ -1,0 +1,126 @@
+.save-the-date {
+	background-color: $color-light-grey;
+	text-align: center;
+	padding: 50px 20px 70px;
+
+	&.dark {
+		background-color: $color-dark-grey;
+
+		.date-sub p, h2, .bigger-text p, .the-date span {
+			color: $color-white !important;
+		}
+	}
+
+	.the-date {
+		span {
+			font-size: 4rem;
+			font-weight: bold;
+			line-height: 100%;
+			padding-right: 20px;
+			position: relative;
+			&:after {
+				content: "";
+				width: 50px;
+				height: 2px;
+				background-color: $color-primary;
+				position: absolute;
+				bottom: 34px;
+				right: -17px;
+				display: block;
+				@include transform(rotate(-60deg));
+			}
+			&:last-child {
+				padding-right: 0;
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+    .bigger-text {
+        margin-bottom: 20px;
+    }
+	.date-sub {
+		p {
+			font-size: $font-size-xxl;
+			color: $color-medium-grey;
+			line-height: 2.5rem;
+			margin: 40px 0 0 0;
+		}
+	}
+	.email-form {
+		width: 100%;
+		margin: 40px auto;
+		max-width: 540px;
+		input[type="email"] {
+			margin: 0;
+		}
+		input[type="submit"] {
+			margin: 0;
+		}
+	}
+	@media #{$media-tiny} {
+		.email-form {
+			width: 100%;
+			margin: 40px auto;
+			max-width: 540px;
+			input[type="email"] {
+				width: 100%;
+				display: block;
+				margin: 0;
+			}
+			input[type="submit"] {
+				width: 100%;
+				display: block;
+				margin: 0;
+			}
+		}
+	}
+	@media #{$media-small-up} {
+		.the-date {
+			span {
+				font-size: 8rem;
+				padding-right: 40px;
+				&:after {
+					content: "";
+					width: 105px;
+					height: 2px;
+					background-color: $color-primary;
+					position: absolute;
+					bottom: 67px;
+					right: -33px;
+					display: block;
+					@include transform(rotate(-60deg));
+				}
+			}
+		}
+		input[type="email"] {
+			width: 376px;
+			display: inline-block;
+			float: left;
+		}
+		input[type="submit"] {
+			width: 160px;
+			display: inline-block;
+		}
+	}
+	@media #{$media-large} {
+		.the-date {
+			span {
+				font-size: 14rem;
+				padding-right: 90px;
+				&:after {
+					content: "";
+					width: 180px;
+					height: 2px;
+					background-color: $color-primary;
+					position: absolute;
+					bottom: 120px;
+					right: -50px;
+					display: block;
+					@include transform(rotate(-60deg));
+				}
+			}
+		}
+	}
+}

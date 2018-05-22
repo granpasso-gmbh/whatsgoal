@@ -1,0 +1,18 @@
+/*!
+Theme Name: wordpress-dev-theme
+Author: Markus Gabriel - markusgabriel.com
+Author URI: http://www.markusgabriel.com
+Text Domain: wordpress-dev-theme
+Version: 1.0.0
+*/
+
+// define standards
+@import "font";
+@import "iconfont";
+@import "config";
+@import "defaults";
+
+@import "typography";
+
+@import "mixins";
+@import "modules";

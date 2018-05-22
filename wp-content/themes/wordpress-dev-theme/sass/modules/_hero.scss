@@ -1,0 +1,170 @@
+@include keyframes(bounce) {
+	0% {
+    @include transform(translate(0px,500px));
+    opacity: 0;
+  }
+	50% {
+    @include transform(translate(0px,-30px));
+  }
+  70% {
+    @include transform(translate(0px,10px));
+  }
+  80% {
+    @include transform(translate(0px,-10px));
+    opacity: 1;
+  }
+  90% {
+    @include transform(translate(0px,5px));
+  }
+	100% {
+    @include transform(translate(0px,0px));
+  }
+}
+@include keyframes(triangle) {
+	0% {
+    @include transform(translate(0px,0px));
+  }
+	50% {
+    @include transform(translate(0px,20px));
+  }
+	100% {
+    @include transform(translate(0px,0px));
+  }
+}
+
+.hero-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100vh;
+	background-size: auto 600px;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 0;
+
+    @media #{$media-small-up} {
+        background-size: cover;
+    }
+}
+
+.hero {
+	width: 100%;
+	height: auto;
+    min-height: 100vh;
+	text-align: center;
+	padding: 10% 5%;
+	position: relative;
+	img {
+		display: block;
+		margin: 0px auto;
+	}
+	.logo {
+		position: relative;
+		width: 300px;
+		height: auto;
+		padding-bottom: 20px;
+		margin: 0 auto 20px;
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			margin-left: -20px;
+			width: 40px;
+			height: 1px;
+			background-color: $color-white;
+		}
+
+		@media #{$media-small-down} {
+			display: none;
+		}
+	}
+	.chat {
+		//@include transition(0.3s ease-in);
+		@include animation(bounce 1s ease-in-out);
+		@include transform(translate(0px,0px));
+		svg {
+			max-width: 100%;
+		}
+		&.finish {
+			@include transform(translateY(0%));
+		}
+	}
+	
+	.button-primary {
+		@media #{$media-small-down} {
+			display: none;
+		}
+	}
+
+	&__text {
+
+        * {
+            color: $color-white !important;
+        }
+
+		h1 {
+			font-size: 4rem;
+			color: $color-white;
+			position: relative;
+			text-transform: uppercase;
+			text-align: center;
+			display: block;
+			margin: 0px auto 20px;
+			padding-bottom: 30px;
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				width: 40px;
+				height: 1px;
+				margin-left: -20px;
+				background-color: $color-white;
+			}
+		}
+
+        p {
+            font-size: $font-size-lg;
+        }
+
+        strong {
+            font-size: 2rem;
+        }
+
+        @media #{$media-small-up} {
+            max-width: 60%;
+            margin: 0 auto;
+        }
+	}
+
+	.scroll-down {
+		display: block;
+		width: 20px;
+		height: 17px;
+		background-image: url("images/triangle.svg");
+		background-size: 20px 17px;
+		background-repeat: no-repeat;
+		position: absolute;
+		bottom: 80px;
+		left: 50%;
+		margin-left: -10px;
+		z-index: 1;
+		@include transition(.3s);
+		@include animation(triangle 2s infinite ease-out);
+
+		@media #{$media-small-up} {
+			bottom: 50px;
+		}
+	}
+	@media #{$media-small-up} {
+		.logo {
+			padding-bottom: 50px;
+			margin-bottom: 50px;
+			width: auto;
+			height: auto;
+		}
+	}
+}

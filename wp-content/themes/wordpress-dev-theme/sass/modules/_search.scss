@@ -1,0 +1,30 @@
+.search-form {
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	right: 15px;
+	border: 1px solid $color-black;
+	input {
+		background-color: $color-white;
+		width: 188px;
+		height: 35px;
+		padding-left: 10px;
+		border: 0;
+		font-weight: 400;
+		color: $color-black;
+	}
+	label {
+		margin: 0;
+	}
+	button {
+		display: none;
+	}
+	@media #{$media-small-down} {
+		display: inline-block;
+    position: relative;
+    top: auto;
+    right: auto;
+    border: 1px solid #000000;
+    margin: 10px 0;
+	}
+}

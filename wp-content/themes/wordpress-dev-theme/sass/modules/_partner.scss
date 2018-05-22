@@ -1,0 +1,32 @@
+.partner {
+	padding: 70px 15px 50px;
+	background-color: $color-white;
+	text-align: center;
+
+    .wrapper {
+        @include display-grid();
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+
+        @media #{$media-small} {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media #{$media-medium-up} {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+	img {
+		margin: 20px auto;
+        display: block;
+		width: 100%;
+        height: auto;
+		padding: 10px;
+		border: 1px solid $color-medium-light-grey;
+        @include transition(.3s ease);
+
+        &:hover {
+            border-color: $color-primary;
+        }
+	}
+}

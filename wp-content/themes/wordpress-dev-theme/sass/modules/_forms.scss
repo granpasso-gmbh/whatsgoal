@@ -1,0 +1,161 @@
+input[type="text"],
+input[type="email"],
+input[type="url"] {
+	width: 100%;
+	border: 0;
+  border-radius: 0;
+	background-color: $color-white;
+	padding: 5px 10px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  background-color: $color-white;
+  padding: 5px 10px;
+  margin-bottom: 15px;
+}
+
+select {
+  @include x-appearance(none);
+  border-radius: 0;
+  background: none;
+  background-color: $color-white;
+  padding: 17px 40px 17px 15px;
+  margin-bottom: 20px;
+  min-width: 110px;
+  text-transform: uppercase;
+  line-height: 100%;
+  border: 0;
+  background-image: url("images/select-arrow.svg");
+  background-size: 20px 10px;
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+}
+select option {
+  @include x-appearance(none);
+  border: 0;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-light-grey;
+}
+// IE HIDE ARROW
+select::-ms-expand {
+  display: none;
+}
+// IE HIDE SELECTED COLOR
+select:focus::-ms-value {
+  background-color: transparent;
+}
+
+label {
+  font-weight: normal;
+}
+
+input[type="submit"] {
+	@extend .button-secondary;
+}
+
+button, input, select, textarea {
+	font-weight: 500;
+	font-size: $font-size-sm;
+  text-transform: uppercase;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $color-dark-grey;
+  font-weight: 500;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $color-dark-grey;
+  font-weight: 500;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $color-dark-grey;
+  font-weight: 500;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $color-dark-grey;
+  font-weight: 500;
+}
+
+.wpcf7 {
+  p {
+    margin: 0px;
+  }
+  a {
+    color: $color-white;
+    text-decoration: underline;
+    &:hover {
+      color: $color-black;
+    }
+  }
+  .datenschutz-hinweis {
+    margin: -15px 0px 0px 40px;
+    color: $color-white;
+    display: block;
+  }
+  .ajax-loader {
+    display: none !important;
+  }
+  .wpcf7-not-valid-tip {
+    color: $color-white !important;
+    margin-top: -15px;
+  }
+  div.wpcf7-response-output {
+    border: 0px;
+    margin: 0 0 20px 0;
+    padding: 0;
+    color: $color-white !important;
+  }
+  .wpcf7-not-valid {
+    border-bottom: 2px solid $color-secondary;
+  }
+  input[type="submit"] {
+    margin: 0 auto;
+    width: 160px;
+    display: block;
+  }
+  .wpcf7-checkbox {
+    margin-bottom: 10px;
+    display: inline-block;
+    .wpcf7-list-item {
+      margin: 0px;
+      label {
+        padding: 0px 0px 0px 0px;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        .wpcf7-list-item-label {
+          position: relative;
+          padding: 0px 0px 0px 40px;
+          color: $color-white;
+          &:before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background: $color-white;
+            margin: 0px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+        input[type="checkbox"] {
+          position: absolute;
+          left: -9999px;
+          &:checked {
+            ~ .wpcf7-list-item-label {
+              &:before {
+                background: $color-white url("images/checkbox.svg");
+                background-size: 20px 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
