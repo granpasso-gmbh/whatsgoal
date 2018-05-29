@@ -30,7 +30,7 @@
 
 	<div class="outer-wrapper">
 
-			<a href="<?php the_field('award_hero_button_link', 387); ?>" title="<?php the_field('award_hero_button_text', 387); ?>" class="button-secondary hover-button">
+			<a href="/digital-sport-award/<?php the_field('award_hero_button_link', 387); ?>" title="<?php the_field('award_hero_button_text', 387); ?>" class="button-secondary hover-button">
 			    <?php the_field('award_hero_button_text', 387); ?>
 			</a>
 
@@ -41,9 +41,7 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo-normal.svg" width="136" height="40">
                 </a>
 
-                <?php if(!is_page(34)) :
-                	wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); 
-                endif; ?>
+                <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 
                 <div class="menu-toggle">
                     <span></span>
@@ -52,11 +50,9 @@
                     <span></span>
                 </div>
 
-                <?php if(!is_page(34)) : ?>
-                <a href="<?php the_field('award_hero_button_link', 387); ?>" title="<?php the_field('award_hero_button_text', 387); ?>" class="button-secondary d-none d-md-inline-block">
+                <a href="/digital-sport-award/<?php the_field('award_hero_button_link', 387); ?>" title="<?php the_field('award_hero_button_text', 387); ?>" class="button-secondary d-none d-md-inline-block">
                   <?php the_field('award_hero_button_text', 387); ?>
                 </a>
-                <?php endif; ?>
 
 
             </div>
