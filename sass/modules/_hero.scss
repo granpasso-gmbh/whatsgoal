@@ -44,9 +44,7 @@
 	background-position: center;
 	z-index: 0;
 
-    @media #{$media-small-up} {
-        background-size: cover;
-    }
+	background-size: cover;
 }
 
 .hero {
@@ -77,7 +75,7 @@
 			background-color: $color-white;
 		}
 
-		@media #{$media-small-down} {
+		@media #{$media-tiny} {
 			display: none;
 		}
 	}
@@ -155,7 +153,7 @@
 		@include transition(.3s);
 		@include animation(triangle 2s infinite ease-out);
 
-		@media #{$media-small-up} {
+		@media #{$media-large} {
 			bottom: 50px;
 		}
 	}

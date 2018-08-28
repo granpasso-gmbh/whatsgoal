@@ -14,13 +14,29 @@
     .grid {
 
         @media #{$media-small} {
-            @include display-grid();
-            grid-template-columns: 1fr 1fr;
+            //@include display-grid();
+            //grid-template-columns: 1fr 1fr;
+            @include flexbox();
+            @include flex-wrap(wrap);
+            @include align-items(stretch);
+            @include justify-content(center);
+
+            > div {
+               @include flex(0 0 50%)
+            }
         }
 
         @media #{$media-medium-up} {
-            @include display-grid();
-            grid-template-columns: 1fr 1fr 1fr;
+            //@include display-grid();
+            //grid-template-columns: 1fr 1fr 1fr;
+            @include flexbox();
+            @include flex-wrap(wrap);
+            @include align-items(stretch);
+            @include justify-content(center);
+
+            > div {
+                @include flex(0 0 33.33%)
+            }
         }
 
         .item {

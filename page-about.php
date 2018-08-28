@@ -38,7 +38,7 @@ $hero_chat_widget = get_field('about_hero_chat_widget'); ?>
                 <?php if(have_rows('about_about_teaser')) :
                     while(have_rows('about_about_teaser')) : the_row();
                         $abouticon = get_sub_field('about_about_teaser_icon'); ?>
-                        <div class="col-xs-12 col-sm-12 col-md-4">
+                        <div class="col-12 col-lg-4">
                             <img src="<?php echo $abouticon['url']; ?>" width="105" height="105">
                             <?php the_sub_field('about_about_teaser_text'); ?>
                         </div>
@@ -53,11 +53,11 @@ $hero_chat_widget = get_field('about_hero_chat_widget'); ?>
         <div class="container">
             <h2 class="with-line"><?php the_field('about_team_headline'); ?></h2>
             <div class="bigger-text"><?php the_field('about_team_text'); ?></div>
-            <div class="row">
+            <div class="row d-flex justify-content-center">
                 <?php if(have_rows('about_team_teaser')) :
                     while(have_rows('about_team_teaser')) : the_row();
                         $teamimage = get_sub_field('about_team_teaser_bild'); ?>
-                        <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div class="col-12 col-lg-4">
                             <img src="<?php echo $teamimage['url']; ?>" width="215" height="215">
                             <?php the_sub_field('about_team_teaser_text'); ?>
                             <div class="some-links">
@@ -126,7 +126,7 @@ $hero_chat_widget = get_field('about_hero_chat_widget'); ?>
 			<?php if(have_rows('about_newsroom_artikel')) : ?>
 			<div class="row">
 				<?php while(have_rows('about_newsroom_artikel')) : the_row(); ?>
-				<div class="col-xs-12 col-sm-12 col-md-4 artikel">
+				<div class="col-12 col-lg-4 artikel">
 					<?php $artikelbild = get_sub_field('about_artikel_bild');
 					$artikelbild_size = 'image_800'; ?>
 					<div class="image">

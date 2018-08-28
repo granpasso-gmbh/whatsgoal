@@ -1,12 +1,21 @@
 .impressions {
-	background-color: $color-primary-dark;
-	text-align: center;
-	padding: 50px 0px 70px;
-	h2 {
-		color: $color-white;
-	}
+    background-color: $color-primary-dark;
+    text-align: center;
+    padding: 50px 0px 70px;
 
-	.bigger-text {
+    .page-template-page-meetup-new & {
+        background-color: $color-white !important;
+
+        h2,p  {
+            color: $body-font-color !important;
+        }
+    }
+
+    h2 {
+        color: $color-white;
+    }
+
+    .bigger-text {
         margin-bottom: 40px;
 
         p {
@@ -14,108 +23,108 @@
         }
     }
 
-	.gallery {
-	  width: 100%;
-	  ul {
-		  list-style: none;
-		  margin: 0;
-		  padding: 0;
-		  width: 100%;
-			li {
-				display: block;
-				width: 100%;
-				margin: 5% 0;
-				position: relative;
-				a {
-					.img-object-fit {
-						width: 100%;
-						height: 280px;
-						position: relative;
-						img {
-							width: 100%;
-							height: 100%;
-							@include object-fit(cover);
-							position: relative;
-							z-index: 1;
-						}
-						&:after {
-							content: "";
-							position: absolute;
-							top: 0;
-							right: 0;
-							bottom: 0;
-							left: 0;
-							z-index: 2;
-							opacity: 0;
-							@include transition(0.3s ease);
-							background: rgba(244,67,54,1);
-							background: -moz-linear-gradient(45deg, rgba(244,67,54,1) 0%, rgba(0,191,166,1) 100%);
-							background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(244,67,54,1)), color-stop(100%, rgba(0,191,166,1)));
-							background: -webkit-linear-gradient(45deg, rgba(244,67,54,1) 0%, rgba(0,191,166,1) 100%);
-							background: -o-linear-gradient(45deg, rgba(244,67,54,1) 0%, rgba(0,191,166,1) 100%);
-							background: -ms-linear-gradient(45deg, rgba(244,67,54,1) 0%, rgba(0,191,166,1) 100%);
-							background: linear-gradient(45deg, rgba(244,67,54,1) 0%, rgba(0,191,166,1) 100%);
-							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f44336', endColorstr='#00bfa6', GradientType=1 );
-							background-blend-mode: lighten;
-						}
-						&:before {
-							content: "";
-							position: absolute;
-							top: 50%;
-							left: 50%;
-							width: 40px;
-							height: 40px;
-							margin-top: -20px;
-							margin-left: -20px;
-							@include transition(0.3s ease);
-							background-image: url("images/icon_plus.svg");
-							background-size: 40px;
-							z-index: 3;
-							opacity: 0;
-						}
-					}
-					&:hover {
-			  		.img-object-fit {
-			  			&:after {
-			  				opacity: 0.8;
-			  			}
-			  			&:before {
-			  				opacity: 1;
-			  			}
-			  		}
-					}
-				}
-			}
-		}
-		img {
-		  display: block;
-		}
-	}
-	@media #{$media-small-up} {
-		.gallery {
-			ul {
-				li {
-					display: inline-block;
-					width: 45%;
-					margin: 1%;
-					a {
-						.img-object-fit {
-							width: 100%;
-							height: 180px;
-						}
-					}
-				}
-			}
-		}
-	}
-	@media #{$media-medium-up} {
-		.gallery {
-			ul {
-				li {
-					width: 20%;
-					margin: 1%;
-				}
-			}
-		}
-	}
+    .gallery {
+        width: 100%;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            li {
+                display: block;
+                width: 100%;
+                margin: 5% 0;
+                position: relative;
+                a {
+                    .img-object-fit {
+                        width: 100%;
+                        height: 280px;
+                        position: relative;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            @include object-fit(cover);
+                            position: relative;
+                            z-index: 1;
+                        }
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            z-index: 2;
+                            opacity: 0;
+                            @include transition(0.3s ease);
+                            background: rgba(244, 67, 54, 1);
+                            background: -moz-linear-gradient(45deg, rgba(244, 67, 54, 1) 0%, rgba(0, 191, 166, 1) 100%);
+                            background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(244, 67, 54, 1)), color-stop(100%, rgba(0, 191, 166, 1)));
+                            background: -webkit-linear-gradient(45deg, rgba(244, 67, 54, 1) 0%, rgba(0, 191, 166, 1) 100%);
+                            background: -o-linear-gradient(45deg, rgba(244, 67, 54, 1) 0%, rgba(0, 191, 166, 1) 100%);
+                            background: -ms-linear-gradient(45deg, rgba(244, 67, 54, 1) 0%, rgba(0, 191, 166, 1) 100%);
+                            background: linear-gradient(45deg, rgba(244, 67, 54, 1) 0%, rgba(0, 191, 166, 1) 100%);
+                            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f44336', endColorstr='#00bfa6', GradientType=1);
+                            background-blend-mode: lighten;
+                        }
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: 40px;
+                            height: 40px;
+                            margin-top: -20px;
+                            margin-left: -20px;
+                            @include transition(0.3s ease);
+                            background-image: url("images/icon_plus.svg");
+                            background-size: 40px;
+                            z-index: 3;
+                            opacity: 0;
+                        }
+                    }
+                    &:hover {
+                        .img-object-fit {
+                            &:after {
+                                opacity: 0.8;
+                            }
+                            &:before {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        img {
+            display: block;
+        }
+    }
+    @media #{$media-small-up} {
+        .gallery {
+            ul {
+                li {
+                    display: inline-block;
+                    width: 45%;
+                    margin: 1%;
+                    a {
+                        .img-object-fit {
+                            width: 100%;
+                            height: 180px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media #{$media-medium-up} {
+        .gallery {
+            ul {
+                li {
+                    width: 20%;
+                    margin: 1%;
+                }
+            }
+        }
+    }
 }

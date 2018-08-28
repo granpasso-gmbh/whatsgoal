@@ -39,7 +39,7 @@
         </section>
 
 		<footer>
-			<p>© <?php echo date('Y'); ?> Whatsgoal  |  <a href="<?php echo esc_url( home_url( '/' ) ); ?>impressum" title="Impressum" target="_blank">Impressum</a></p>
+			<p>© <?php echo date('Y'); ?> Whatsgoal  |  <a href="<?php echo esc_url( home_url( '/' ) ); ?>impressum" title="Impressum" target="_blank">Impressum</a>&nbsp;|&nbsp;<a href="<?php echo esc_url( home_url( '/' ) ); ?>datenschutzerklaerung" title="Datenschutzerklärung" target="_blank">Datenschutzerklärung</a></p>
 		</footer>
 
 	</div>

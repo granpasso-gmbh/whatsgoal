@@ -167,20 +167,20 @@ $hero_logo = get_field('award_hero_logo'); ?>
                 <?php while(have_rows('award_agenda')) : the_row(); ?>
                     <div class="row">
 
-                        <div class="col-xs-12 col-sm-3 col-md-2">
+                        <div class="col-xs-12 col-sm-3 col-lg-2">
                             <div class="agenda__time">
                                 <?php the_sub_field('award_agenda_zeit'); ?>
                             </div>
                         </div>
 
-                        <div class="col-xs-12 col-sm-9 col-md-5">
+                        <div class="col-xs-12 col-sm-9 col-lg-5">
                             <div class="agenda__title">
                                 <h4><?php the_sub_field('award_agenda_titel'); ?></h4>
                                 <strong><?php the_sub_field('award_agenda_untertitel'); ?></strong>
                             </div>
                         </div>
 
-                        <div class="col-xs-12 col-sm-12 col-md-5">
+                        <div class="col-xs-12 col-sm-12 col-lg-5">
                             <div class="agenda__text">
                                 <?php the_sub_field('award_agenda_beschreibung'); ?>
                             </div>
@@ -275,7 +275,7 @@ $hero_logo = get_field('award_hero_logo'); ?>
                         zoom: 14
                     });
 
-                    var image = 'http://whatsgoal.de/wp-content/themes/wordpress-dev-theme/images/marker.png';
+                    var image = 'https://whatsgoal.de/wp-content/themes/wordpress-dev-theme/images/marker.png';
                     var beachMarker = new google.maps.Marker({
                         position: {lat: 51.21480629999999, lng: 6.818319299999985},
                         map: map,

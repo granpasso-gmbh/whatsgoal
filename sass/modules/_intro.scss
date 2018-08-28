@@ -3,6 +3,10 @@
     text-align: center;
     padding: 50px 0px 70px;
 
+    .page-template-page-meetup-new & {
+        background-color: $color-white;
+    }
+
     &__text {
         @media #{$media-medium-up} {
             max-width: 80%;

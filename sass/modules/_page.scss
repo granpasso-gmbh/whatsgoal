@@ -1,12 +1,16 @@
 .main {
-	position: relative;
-	z-index: 1;
-	background-color: $color-white;
+    position: relative;
+    z-index: 1;
+    background-color: $color-white;
 }
 
 .flex-center-v {
-	@include flexbox();
-	@include align-items(center);
-	@include justify-content(center);
-	@include flex-direction(column);
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex-direction(column);
+}
+
+.bg-light-grey {
+    background-color: $color-light-grey !important;
 }

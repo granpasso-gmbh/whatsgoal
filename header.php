@@ -50,9 +50,9 @@
                     <span></span>
                 </div>
 
-                <a href="/digital-sport-award/<?php the_field('award_hero_button_link', 387); ?>" title="<?php the_field('award_hero_button_text', 387); ?>" class="button-secondary d-none d-md-inline-block">
+                <?php/*<a href="/digital-sport-award/<?php the_field('award_hero_button_link', 387); ?>" title="<?php the_field('award_hero_button_text', 387); ?>" class="button-secondary d-none d-lg-inline-block">
                   <?php the_field('award_hero_button_text', 387); ?>
-                </a>
+                </a>*/?>
 
 
             </div>

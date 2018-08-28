@@ -5,8 +5,8 @@
     }
     
     .row {
-        @include display-grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        /*@include display-grid;
+        grid-template-columns: 1fr 1fr 1fr;*/
         
         &:before {
             display: none;
