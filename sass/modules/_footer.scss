@@ -3,6 +3,8 @@ footer {
 	background-color: $color-white;
 	padding: 10px;
 	position: relative;
+	z-index: 2;
+
 	p {
 		margin: 0;
 		text-transform: uppercase;

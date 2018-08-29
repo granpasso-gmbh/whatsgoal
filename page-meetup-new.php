@@ -4,15 +4,42 @@
 */
 get_header(); ?>
 
-<?php $hero_hintergrund = get_field('meetup_hero_hintergrund'); ?>
+<?php $hero_logo = get_field('new_page_hero_logo');?>
 
-<div class="hero-bg" style="background-image: url('<?php echo $hero_hintergrund; ?>')">
+
+<?php if(have_rows('new_page_hero_hintergrund_slider')) : ?>
+<div class="swiper-container swiper-hero hero-bg">
+    <div class="swiper-wrapper">
+        <?php while(have_rows('new_page_hero_hintergrund_slider')) : the_row();
+        $hero_hintergrund = get_sub_field('new_page_hero_hintergrund_slide'); ?>
+        <div class="swiper-slide">
+            <?php echo wp_get_attachment_image($hero_hintergrund, 'full'); ?>
+        </div>
+        <?php endwhile; ?>
+    </div>
 </div>
+<script>
+    var swiperClass = ".swiper-hero";
+    var swiper = new Swiper(swiperClass, {
+        spaceBetween: 0,
+        loop: true,
+        effect: 'fade',
+        autoplay: {
+            delay: 5000,
+        },
+    });
+</script>
+<?php endif; ?>
+
 
 <section class="hero flex-center-v">
 
+    <div class="logo">
+        <img src="<?php echo $hero_logo['url']; ?>" alt="<?php echo $hero_logo['alt']; ?>" width="300">
+    </div>
+
     <div class="hero__text">
-        <?php the_field('meetup_hero_text'); ?>
+        <?php the_field('new_page_hero_text'); ?>
     </div>
 
 	<div class="scroll-down">
@@ -35,10 +62,10 @@ get_header(); ?>
     <?php endif; ?>
 
     <?php if(get_field('new_page_intro_headline')) : ?>
-        <div class="intro bg-light-grey">
+        <div class="intro">
             <div class="container">
                 <h2 class="with-line"><?php the_field('new_page_intro_headline'); ?></h2>
-                <div class="intro__text bigger-text">
+                <div class="bigger-text">
                     <?php the_field('new_page_intro_text'); ?>
                 </div>
             </div>
@@ -46,7 +73,43 @@ get_header(); ?>
     <?php endif; ?>
 
 
-    <?php if(get_field('impressionen_headline')) : ?>
+    <?php if(have_rows('new_page_slideshow')) : ?>
+        <div class="gallery-preview">
+            <div class="container">
+                <h2 class="with-line"><?php the_field('new_page_slideshow_headline'); ?></h2>
+
+                <div class="swiper-container swiper-slideshow">
+                    <div class="swiper-wrapper">
+                        <?php while(have_rows('new_page_slideshow')) : the_row();
+                            $slideshow_slide = get_sub_field('new_page_slideshow_image'); ?>
+                            <div class="swiper-slide">
+                                <?php echo wp_get_attachment_image($slideshow_slide, 'full'); ?>
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+                </div>
+                <script>
+                    var swiperClass = ".swiper-slideshow";
+                    var swiper = new Swiper(swiperClass, {
+                        spaceBetween: 0,
+                        loop: true,
+                        autoplay: {
+                            delay: 5000,
+                        },
+                    });
+                </script>
+
+                <div class="gallery-preview__cta">
+                    <a href="<?php the_field('new_page_slideshow_button_link'); ?>" title="<?php the_field('new_page_slideshow_button_text'); ?>" class="button-secondary" target="_blank">
+                        <?php the_field('new_page_slideshow_button_text'); ?>
+                    </a>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+
+
+    <?php/* if(get_field('impressionen_headline')) : ?>
         <div class="impressions" id="impressions">
             <div class="container">
                 <h2 class="with-line"><?php the_field('impressionen_headline'); ?></h2>
@@ -84,6 +147,17 @@ get_header(); ?>
                 counter: true, // boolean
                 slideSpeed: 500 });
         </script>
+    <?php endif; */?>
+
+
+    <?php if(get_field('new_page_form_text')) : ?>
+        <div class="intro">
+            <div class="container">
+                <div class="intro__text bigger-text">
+                    <?php the_field('new_page_form_text'); ?>
+                </div>
+            </div>
+        </div>
     <?php endif; ?>
 
 
@@ -120,6 +194,14 @@ get_header(); ?>
             </div>
         </div>
     <?php endif; ?>
+
+
+    <div class="social-media-feed">
+        <div class="container">
+            <h2 class="with-line"><?php the_field('social_media_feed_headline', 34); ?></h2>
+            <?php the_field('social_media_feed', 34); ?>
+        </div>
+    </div>
 
 
 

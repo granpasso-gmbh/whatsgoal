@@ -33,7 +33,7 @@
 }
 
 .hero-bg {
-	position: fixed;
+	position: fixed !important;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -54,6 +54,7 @@
 	text-align: center;
 	padding: 10% 5%;
 	position: relative;
+	z-index: 2;
 	img {
 		display: block;
 		margin: 0px auto;
