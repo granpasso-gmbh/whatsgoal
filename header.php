@@ -30,9 +30,9 @@
 
 	<div class="outer-wrapper">
 
-			<a href="/digital-sport-award/<?php the_field('award_hero_button_link', 387); ?>" title="<?php the_field('award_hero_button_text', 387); ?>" class="button-secondary hover-button">
+        <?php/*<a href="/digital-sport-award/<?php the_field('award_hero_button_link', 387); ?>" title="<?php the_field('award_hero_button_text', 387); ?>" class="button-secondary hover-button">
 			    <?php the_field('award_hero_button_text', 387); ?>
-			</a>
+			</a>*/?>
 
         <header>
             <div class="container align-items-center">

@@ -13,7 +13,9 @@ get_header(); ?>
         <?php while(have_rows('new_page_hero_hintergrund_slider')) : the_row();
         $hero_hintergrund = get_sub_field('new_page_hero_hintergrund_slide'); ?>
         <div class="swiper-slide">
-            <?php echo wp_get_attachment_image($hero_hintergrund, 'full'); ?>
+            <div class="img-object-fit">
+                <?php echo wp_get_attachment_image($hero_hintergrund, 'full'); ?>
+            </div>
         </div>
         <?php endwhile; ?>
     </div>
@@ -151,7 +153,7 @@ get_header(); ?>
 
 
     <?php if(get_field('new_page_form_text')) : ?>
-        <div class="intro">
+        <div class="intro bg-light-grey">
             <div class="container">
                 <div class="intro__text bigger-text">
                     <?php the_field('new_page_form_text'); ?>
