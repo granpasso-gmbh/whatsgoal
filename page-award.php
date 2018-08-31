@@ -307,13 +307,6 @@ $hero_logo = get_field('award_hero_logo'); ?>
     <?php endif; ?>
 
 
-    <div class="social-media-feed">
-        <div class="container">
-            <h2 class="with-line"><?php the_field('social_media_feed_headline', 34); ?></h2>
-            <?php the_field('social_media_feed', 34); ?>
-        </div>
-    </div>
-
 
 
 <?php get_footer(); ?>

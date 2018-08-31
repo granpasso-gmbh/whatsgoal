@@ -206,7 +206,7 @@ $hero_chat_widget = get_field('hero_chat_widget'); ?>
 			<div class="inner">
 				<div class="form-intro"><?php the_field('partner_werden_einleitungstext'); ?></div>
 				<div class="formular">
-					<?php $formcode = get_field('partner_werden_formular'); 
+					<?php $formcode = get_field('partner_werden_formular');
 					echo do_shortcode($formcode); ?>
 				</div>
 			</div>
@@ -257,12 +257,6 @@ $hero_chat_widget = get_field('hero_chat_widget'); ?>
 	</div>
 <?php endif; ?>
 
-	<div class="social-media-feed">
-		<div class="container">
-			<h2 class="with-line"><?php the_field('social_media_feed_headline'); ?></h2>
-			<?php the_field('social_media_feed'); ?>
-		</div>
-	</div>
 
 
 <?php get_footer(); ?>

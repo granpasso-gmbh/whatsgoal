@@ -14,7 +14,7 @@ get_header(); ?>
         $hero_hintergrund = get_sub_field('new_page_hero_hintergrund_slide'); ?>
         <div class="swiper-slide">
             <div class="img-object-fit">
-                <?php echo wp_get_attachment_image($hero_hintergrund, 'full'); ?>
+                <?php echo wp_get_attachment_image($hero_hintergrund, 'image_1800'); ?>
             </div>
         </div>
         <?php endwhile; ?>
@@ -85,7 +85,7 @@ get_header(); ?>
                         <?php while(have_rows('new_page_slideshow')) : the_row();
                             $slideshow_slide = get_sub_field('new_page_slideshow_image'); ?>
                             <div class="swiper-slide">
-                                <?php echo wp_get_attachment_image($slideshow_slide, 'full'); ?>
+                                <?php echo wp_get_attachment_image($slideshow_slide, 'slideshow'); ?>
                             </div>
                         <?php endwhile; ?>
                     </div>
@@ -201,7 +201,7 @@ get_header(); ?>
     <div class="social-media-feed">
         <div class="container">
             <h2 class="with-line"><?php the_field('social_media_feed_headline', 34); ?></h2>
-            <?php the_field('social_media_feed', 34); ?>
+            <?php echo do_shortcode('[instagram-feed]') ?>
         </div>
     </div>
 

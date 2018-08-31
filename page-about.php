@@ -161,12 +161,6 @@ $hero_chat_widget = get_field('about_hero_chat_widget'); ?>
 	</div>
     <?php endif; ?>
 
-	<div class="social-media-feed">
-		<div class="container">
-			<h2 class="with-line"><?php the_field('social_media_feed_headline', 34); ?></h2>
-			<?php the_field('social_media_feed', 34); ?>
-		</div>
-	</div>
 
 
 <?php get_footer(); ?>
